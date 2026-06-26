@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us — Emerance – The Salon | [City], Canada</title>
+<meta name="description" content="Learn the story behind Emerance – The Salon in [City], Canada. Certified stylists, genuine care and a team that truly looks after you."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --petal:  #F4EBE8;
+  --blush:  #E8C8C0;
+  --rose:   #C4847A;
+  --plum:   #7D4E57;
+  --plum-d: #5C3340;
+  --gold:   #C9A96E;
+  --gold-l: #EAD8B5;
+  --cream:  #FBF8F5;
+  --warm:   #F5EAE4;
+  --ink:    #2A1A1F;
+  --mid:    #7A6068;
+  --light:  #B8A8AC;
+  --border: #EAD4CC;
+  --white:  #FFFFFF;
+  --ff-h:   'Cormorant Garamond', Georgia, serif;
+  --ff-b:   'Jost', sans-serif;
+  --ease:   cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:var(--ff-b);cursor:pointer;border:none;background:none}
+
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.reveal.on{opacity:1;transform:none}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(251,248,245,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center}
+.nav-inner{width:100%;max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--ff-h);font-size:22px;font-weight:500;color:var(--ink);letter-spacing:.02em;line-height:1}
+.nav-logo span{display:block;font-family:var(--ff-b);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--light);font-weight:400;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-cta{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#fff;background:var(--ink);padding:10px 22px;border-radius:2px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;width:24px}
+.burger span{display:block;height:1.5px;background:var(--ink);border-radius:1px;transition:all .3s}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mob{position:fixed;inset:0;z-index:950;background:var(--cream);display:none;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mob.open{display:flex}
+.mob-x{position:absolute;top:20px;right:24px;font-size:30px;color:var(--mid);cursor:pointer;line-height:1}
+.mob a{font-family:var(--ff-h);font-size:32px;color:var(--ink);font-weight:400;transition:color .2s;font-style:italic}
+.mob a:hover{color:var(--plum)}
+.mob-book-btn{
+  margin-top:6px;padding:13px 38px;background:var(--plum);
+  color:#fff!important;border-radius:50px;font-size:18px!important;
+  font-style:italic;font-family:var(--ff-h);font-weight:500;
+  transition:background .25s;display:inline-block;
+}
+.mob-book-btn:hover{background:var(--plum-d);color:#fff!important}
+
+/* PAGE HERO */
+.page-hero{margin-top:68px;background:var(--plum-d);padding:100px 0 84px;position:relative;overflow:hidden;text-align:center}
+.page-hero-deco{position:absolute;top:-60px;right:-80px;width:480px;opacity:.07;pointer-events:none;animation:driftSlow 12s ease-in-out infinite}
+.page-hero-deco2{position:absolute;bottom:-40px;left:-60px;width:360px;opacity:.06;pointer-events:none;animation:driftSlow 10s ease-in-out infinite reverse}
+@keyframes driftSlow{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.02)}}
+@keyframes floatPetal{0%,100%{transform:translateY(0) rotate(0deg)}33%{transform:translateY(-12px) rotate(3deg)}66%{transform:translateY(8px) rotate(-2deg)}}
+.page-hero-pre{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:18px;display:block;position:relative;z-index:1}
+.page-hero h1{font-family:var(--ff-h);font-size:clamp(38px,6vw,68px);color:#fff;font-weight:300;line-height:1.05;position:relative;z-index:1}
+.page-hero h1 em{font-style:italic;color:var(--gold)}
+.page-hero-sub{font-size:14.5px;color:rgba(255,255,255,.45);font-weight:300;margin-top:18px;max-width:460px;margin-inline:auto;line-height:1.8;position:relative;z-index:1}
+.floral-drag{position:absolute;right:60px;top:30px;cursor:grab;z-index:3;user-select:none;touch-action:none;animation:floatPetal 8s ease-in-out infinite}
+.floral-drag:active{cursor:grabbing}
+
+/* COMMONS */
+.sec{padding:88px 0}
+.sec-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:block}
+.sec-h2{font-family:var(--ff-h);font-size:clamp(28px,4vw,44px);color:var(--ink);font-weight:400;line-height:1.15;margin-bottom:16px}
+.sec-h2 em{font-style:italic}
+.sec-p{font-size:15px;color:var(--mid);line-height:1.8;font-weight:300;max-width:540px}
+.divider{width:48px;height:2px;background:var(--gold);margin:20px 0}
+
+/* STORY */
+.story{background:var(--cream);border-bottom:1px solid var(--border)}
+.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.story-imgs{
+  display:grid;grid-template-columns:1fr 1fr;
+  grid-template-rows:260px 220px;gap:18px;
+}
+.s-img{
+  background:var(--warm);display:flex;align-items:center;
+  justify-content:center;flex-direction:column;gap:6px;
+  border-radius:20px;overflow:hidden;
+  transition:transform .32s var(--ease),box-shadow .32s;
+}
+.s-img:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(42,26,31,.1)}
+.s-img:nth-child(1){grid-column:1/2;grid-row:1/3;background:linear-gradient(160deg,var(--plum),var(--plum-d))}
+.s-img:nth-child(2){background:var(--warm)}
+.s-img:nth-child(3){background:var(--plum-d)}
+.s-img-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.22);text-align:center;padding:0 16px}
+.s-img:nth-child(2) .s-img-lbl{color:var(--light)}
+.s-stat{display:flex;flex-direction:column;align-items:center;gap:4px;padding:20px}
+.s-stat-n{font-family:var(--ff-h);font-size:42px;font-weight:400;line-height:1;color:var(--ink)}
+.s-img:nth-child(3) .s-stat-n{color:#fff}
+.s-stat-l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
+.s-img:nth-child(3) .s-stat-l{color:rgba(255,255,255,.4)}
+
+.story-body{padding:72px 64px;border-left:1px solid var(--border)}
+.story-text{font-size:15px;color:var(--mid);line-height:1.85;font-weight:300;margin-bottom:18px}
+.story-checks{display:flex;flex-direction:column;gap:10px;margin-top:32px}
+.s-check{
+  display:flex;align-items:center;gap:14px;padding:14px 18px;
+  border:1px solid var(--border);border-radius:14px;
+  font-size:14px;color:var(--ink);background:#fff;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.s-check:hover{background:var(--warm);border-color:var(--blush);transform:translateX(4px)}
+.s-check-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+
+/* STATS ROW */
+.stats-row{background:var(--warm);padding:64px 0}
+.stats-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+.stat-cell{
+  text-align:center;padding:40px 20px;
+  background:#fff;border:1px solid var(--border);border-radius:20px;
+  transition:transform .32s var(--ease),box-shadow .32s,border-color .32s;
+}
+.stat-cell:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(42,26,31,.08);border-color:var(--blush)}
+.stat-n{font-family:var(--ff-h);font-size:clamp(36px,4vw,52px);font-weight:400;color:var(--ink);line-height:1}
+.stat-l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);margin-top:8px}
+
+/* VALUES */
+.values{background:var(--warm);border-bottom:1px solid var(--border)}
+.values-hdr{margin-bottom:52px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.val{
+  background:#fff;padding:36px 28px;border-radius:20px;
+  border:1px solid var(--border);
+  transition:transform .32s var(--ease),box-shadow .32s,border-color .32s;
+}
+.val:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(42,26,31,.08);border-color:var(--blush)}
+.val-num{font-family:var(--ff-h);font-size:13px;color:var(--gold);font-weight:400;letter-spacing:.05em;margin-bottom:16px}
+.val-title{font-family:var(--ff-h);font-size:20px;color:var(--ink);font-weight:400;margin-bottom:10px}
+.val-desc{font-size:13px;color:var(--mid);line-height:1.75;font-weight:300}
+
+/* TEAM */
+.team-sec{background:var(--cream);border-bottom:1px solid var(--border)}
+.team-hdr{margin-bottom:52px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.team-card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  border:1px solid var(--border);
+  transition:transform .32s var(--ease),box-shadow .32s,border-color .32s;
+}
+.team-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(42,26,31,.08);border-color:var(--blush)}
+.team-photo{
+  height:260px;background:var(--warm);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:8px;border-bottom:1px solid var(--border);
+}
+.team-photo-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
+.team-info{padding:24px 22px}
+.team-name{font-family:var(--ff-h);font-size:22px;color:var(--ink);font-weight:400;margin-bottom:4px}
+.team-role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;font-weight:600}
+.team-bio{font-size:13px;color:var(--mid);line-height:1.72;font-weight:300}
+
+/* CREDS */
+.creds{background:var(--warm);border-bottom:1px solid var(--border)}
+.creds-hdr{margin-bottom:52px}
+.creds-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cred{
+  background:#fff;padding:32px 24px;border-radius:18px;
+  border:1px solid var(--border);
+  transition:transform .32s var(--ease),box-shadow .32s,border-color .32s;
+}
+.cred:hover{transform:translateY(-5px);box-shadow:0 14px 36px rgba(42,26,31,.08);border-color:var(--blush)}
+.cred-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px}
+.cred-title{font-family:var(--ff-h);font-size:18px;color:var(--ink);font-weight:400;margin-bottom:8px}
+.cred-desc{font-size:13px;color:var(--mid);line-height:1.7;font-weight:300}
+
+/* CTA DARK */
+.cta-dark{background:var(--plum-d);padding:88px 0;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+.cta-dark h2{font-family:var(--ff-h);font-size:clamp(30px,4vw,48px);color:#fff;font-weight:400;margin-bottom:14px;line-height:1.2}
+.cta-dark h2 em{font-style:italic;color:var(--gold)}
+.cta-dark p{font-size:15px;color:rgba(255,255,255,.42);margin-bottom:36px;font-weight:300}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-white{padding:13px 30px;background:#fff;color:var(--ink);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-radius:2px;transition:all .25s;display:inline-block}
+.btn-white:hover{background:var(--gold);color:#fff}
+.btn-outline-w{padding:12px 28px;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:all .25s;display:inline-block}
+.btn-outline-w:hover{border-color:rgba(255,255,255,.7);color:#fff}
+
+/* FOOTER */
+.footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.04)}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding:64px 0 48px}
+.f-logo{font-family:var(--ff-h);font-size:22px;color:var(--gold);font-weight:300;letter-spacing:.02em;margin-bottom:4px}
+.f-logo-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,169,110,.3);margin-bottom:18px}
+.f-desc{font-size:13px;color:rgba(255,255,255,.3);line-height:1.8;font-weight:300;max-width:250px;margin-bottom:24px}
+.f-social{display:flex;gap:10px}
+.f-soc{width:34px;height:34px;border:1px solid rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:12px;transition:all .2s;text-decoration:none}
+.f-soc:hover{border-color:var(--gold);color:var(--gold)}
+.f-col-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;font-weight:600}
+.f-links{display:flex;flex-direction:column;gap:10px}
+.f-links a{font-size:13px;color:rgba(255,255,255,.3);transition:color .2s;font-weight:300}
+.f-links a:hover{color:var(--gold)}
+.f-hours{display:flex;flex-direction:column;gap:8px}
+.f-hour{font-size:12.5px;color:rgba(255,255,255,.28);display:flex;justify-content:space-between;gap:16px}
+.f-hour-d{color:rgba(255,255,255,.48)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.f-copy{font-size:11px;color:rgba(255,255,255,.18)}
+.f-bot-links{display:flex;gap:20px}
+.f-bot-links a{font-size:11px;color:rgba(255,255,255,.18);transition:color .2s}
+.f-bot-links a:hover{color:var(--gold)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .story-inner{grid-template-columns:1fr}
+  .story-imgs{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px}
+  .s-img:nth-child(1){grid-column:1/2;grid-row:1/3}
+  .story-body{border-left:none;border-top:1px solid var(--border);padding:48px 36px}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-cell:nth-child(2){border-right:none}
+  .stat-cell:nth-child(3){border-top:1px solid var(--border)}
+  .creds-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .floral-drag{display:none}
+  .values-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .story-body{padding:40px 18px}
+  .sec{padding:64px 0}
+  .stats-inner{grid-template-columns:1fr}
+  .creds-grid{grid-template-columns:1fr}
+  .cta-btns{flex-direction:column;align-items:center}
+  .story-imgs{grid-template-rows:180px 160px;gap:8px;background:transparent;gap:8px}
+}
+</style>
+</head>
+<body>
+<div style="overflow-x:hidden;width:100%;position:relative">
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      Emerance
+      <span>The Salon — [City], Canada</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html#booking" class="nav-cta">Book Now</a>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- MOB -->
+<div class="mob" id="mob">
+  <span class="mob-x" id="mobX">&#215;</span>
+  <a href="index.html" onclick="closeMob()">Home</a>
+  <a href="about.html" onclick="closeMob()">About</a>
+  <a href="services.html" onclick="closeMob()">Services</a>
+  <a href="gallery.html" onclick="closeMob()">Gallery</a>
+  <a href="offers.html" onclick="closeMob()">Offers</a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
+  <a href="contact.html#booking" class="mob-book-btn" onclick="closeMob()">Book Appointment</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <svg class="page-hero-deco" viewBox="0 0 400 500" fill="none">
+    <ellipse cx="200" cy="250" rx="180" ry="240" stroke="#C9A96E" stroke-width="1"/>
+    <ellipse cx="200" cy="250" rx="110" ry="150" stroke="#C4847A" stroke-width="0.7"/>
+    <path d="M200 10 Q230 80 240 160 Q250 240 220 320 Q200 380 180 440" stroke="#C4847A" stroke-width="0.8" stroke-dasharray="4 6"/>
+  </svg>
+  <svg class="page-hero-deco2" viewBox="0 0 300 380" fill="none">
+    <ellipse cx="150" cy="190" rx="140" ry="180" stroke="#C9A96E" stroke-width="0.8"/>
+    <path d="M150 10 Q120 100 110 190 Q100 280 130 360" stroke="#C4847A" stroke-width="0.6" stroke-dasharray="3 5"/>
+  </svg>
+
+  <div class="floral-drag" id="floralEl" style="right:80px;top:40px;left:auto">
+    <svg width="180" height="240" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.35">
+      <path d="M100 270 Q92 200 88 160 Q84 120 96 80 Q100 60 100 40" stroke="#EAD8B5" stroke-width="1.5" fill="none"/>
+      <path d="M96 180 Q70 170 55 148 Q76 145 96 163Z" stroke="#EAD8B5" stroke-width="1" fill="none"/>
+      <path d="M92 150 Q115 138 132 118 Q114 117 96 135Z" stroke="#EAD8B5" stroke-width="1" fill="none"/>
+      <path d="M100 38 Q88 18 76 8 Q78 28 90 40Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <path d="M100 38 Q118 16 132 8 Q128 28 114 40Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <path d="M100 38 Q122 34 138 40 Q128 56 112 52Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <path d="M100 38 Q108 60 118 68 Q100 64 88 56Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <path d="M100 38 Q78 60 68 68 Q82 64 90 54Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <path d="M100 38 Q64 36 52 42 Q64 56 82 50Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+      <circle cx="100" cy="38" r="8" stroke="#fff" stroke-width="1.2" fill="none" opacity="0.6"/>
+      <circle cx="100" cy="38" r="3" fill="#fff" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <span class="page-hero-pre">About Us</span>
+    <h1>Skilled in Beauty,<br/><em>Trusted by Families</em></h1>
+    <p class="page-hero-sub">The people, values and passion behind Emerance – The Salon in [City], Canada.</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="sec story">
+  <div class="wrap">
+    <div class="story-inner">
+      <div class="story-imgs reveal">
+        <div class="s-img">
+          <p class="s-img-lbl">Upload Salon Interior Image</p>
+        </div>
+        <div class="s-img">
+          <div class="s-stat">
+            <div class="s-stat-n">5+</div>
+            <div class="s-stat-l">Years of Experience</div>
+          </div>
+        </div>
+        <div class="s-img">
+          <div class="s-stat">
+            <div class="s-stat-n">500+</div>
+            <div class="s-stat-l">Happy Brides</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-body reveal">
+        <span class="sec-label">Our Story</span>
+        <h2 class="sec-h2">Crafting Beauty,<br/><em>Building Confidence</em></h2>
+        <div class="divider"></div>
+        <p class="story-text">
+          Welcome to <strong>Emerance – The Salon</strong> — [City]'s destination for trusted beauty and genuine care. We believe that every woman deserves to feel extraordinary, and we built our salon around that promise.
+        </p>
+        <p class="story-text">
+          From precision haircuts to breathtaking bridal transformations, every service is carried out with real skill and honest attention. Our certified team listens first, advises honestly and delivers results you can see.
+        </p>
+        <p class="story-text">
+          Since opening our doors in [City], we have been part of hundreds of important moments — wedding days, graduations, anniversaries and everyday confidence that matters just as much.
+        </p>
+        <div class="story-checks">
+          <div class="s-check"><div class="s-check-dot"></div>Certified Expert Stylists &amp; Makeup Artists</div>
+          <div class="s-check"><div class="s-check-dot"></div>Trusted Professional Beauty Brands</div>
+          <div class="s-check"><div class="s-check-dot"></div>Hygienic, Sanitised &amp; Welcoming Environment</div>
+          <div class="s-check"><div class="s-check-dot"></div>Personalised Consultations Every Visit</div>
+          <div class="s-check"><div class="s-check-dot"></div>Google Verified — Rated 4.9 by Real Clients</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="wrap">
+    <div class="stats-inner">
+      <div class="stat-cell reveal">
+        <div class="stat-n" data-target="500">0</div>
+        <div class="stat-l">Happy Brides</div>
+      </div>
+      <div class="stat-cell reveal" style="transition-delay:.08s">
+        <div class="stat-n" data-target="10">0</div>
+        <div class="stat-l">Team Members</div>
+      </div>
+      <div class="stat-cell reveal" style="transition-delay:.16s">
+        <div class="stat-n">4.9</div>
+        <div class="stat-l">Google Rating</div>
+      </div>
+      <div class="stat-cell reveal" style="transition-delay:.24s">
+        <div class="stat-n" data-target="5">0</div>
+        <div class="stat-l">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<section class="sec values">
+  <div class="wrap">
+    <div class="values-hdr reveal">
+      <span class="sec-label">What We Stand For</span>
+      <h2 class="sec-h2">Our Values</h2>
+      <div class="divider"></div>
+      <p class="sec-p">Everything we do starts here — because great beauty work starts with great character.</p>
+    </div>
+    <div class="values-grid">
+      <div class="val reveal" style="transition-delay:.05s">
+        <p class="val-num">01</p>
+        <h3 class="val-title">Genuine Care</h3>
+        <p class="val-desc">We treat every client like family. Your comfort, needs and confidence always come first — no exceptions, every visit.</p>
+      </div>
+      <div class="val reveal" style="transition-delay:.10s">
+        <p class="val-num">02</p>
+        <h3 class="val-title">Honest Service</h3>
+        <p class="val-desc">We tell you what actually works for you, not just what sells. Our advice is always straightforward and in your best interest.</p>
+      </div>
+      <div class="val reveal" style="transition-delay:.15s">
+        <p class="val-num">03</p>
+        <h3 class="val-title">Skilled Craft</h3>
+        <p class="val-desc">Our team invests in continuous training so we always deliver the best results using the most current and proven techniques.</p>
+      </div>
+      <div class="val reveal" style="transition-delay:.20s">
+        <p class="val-num">04</p>
+        <h3 class="val-title">Clean Standards</h3>
+        <p class="val-desc">A clean and hygienic salon is non-negotiable. We maintain strict sterilisation protocols with every single client, every time.</p>
+      </div>
+      <div class="val reveal" style="transition-delay:.25s">
+        <p class="val-num">05</p>
+        <h3 class="val-title">Open Communication</h3>
+        <p class="val-desc">We listen carefully before we begin. Understanding what you want is just as important to us as the skill to deliver it.</p>
+      </div>
+      <div class="val reveal" style="transition-delay:.30s">
+        <p class="val-num">06</p>
+        <h3 class="val-title">Continuous Growth</h3>
+        <p class="val-desc">We are always learning and improving — so our clients always receive service that is current, refined and worth coming back for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec team-sec">
+  <div class="wrap">
+    <div class="team-hdr reveal">
+      <span class="sec-label">The People</span>
+      <h2 class="sec-h2">Meet Our Team</h2>
+      <div class="divider"></div>
+      <p class="sec-p">Skilled, certified and genuinely passionate about making you look and feel your best.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal" style="transition-delay:.05s">
+        <div class="team-photo">
+          <p class="team-photo-lbl">Upload Team Photo</p>
+        </div>
+        <div class="team-info">
+          <div class="team-name">[Team Member Name]</div>
+          <div class="team-role">Senior Bridal Makeup Artist</div>
+          <p class="team-bio">Certified makeup artist with [X]+ years of experience specialising in bridal, HD and airbrush makeup for all skin tones and occasions.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay:.10s">
+        <div class="team-photo">
+          <p class="team-photo-lbl">Upload Team Photo</p>
+        </div>
+        <div class="team-info">
+          <div class="team-name">[Team Member Name]</div>
+          <div class="team-role">Expert Hair Stylist</div>
+          <p class="team-bio">Specialises in precision cuts, balayage, keratin and hair spa treatments with a deep focus on hair health and long-lasting results.</p>
+        </div>
+      </div>
+      <div class="team-card reveal" style="transition-delay:.15s">
+        <div class="team-photo">
+          <p class="team-photo-lbl">Upload Team Photo</p>
+        </div>
+        <div class="team-info">
+          <div class="team-name">[Team Member Name]</div>
+          <div class="team-role">Skin Care Specialist</div>
+          <p class="team-bio">Certified aesthetician focused on personalised skin treatments, facials and skin analysis for visible, lasting improvements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="sec creds">
+  <div class="wrap">
+    <div class="creds-hdr reveal">
+      <span class="sec-label">Credentials</span>
+      <h2 class="sec-h2">Certified &amp; Trusted</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="creds-grid">
+      <div class="cred reveal" style="transition-delay:.05s">
+        <div class="cred-label">Certification</div>
+        <h3 class="cred-title">Professionally Certified</h3>
+        <p class="cred-desc">All our stylists hold recognised beauty and cosmetology certifications from accredited Canadian institutes.</p>
+      </div>
+      <div class="cred reveal" style="transition-delay:.10s">
+        <div class="cred-label">Health &amp; Safety</div>
+        <h3 class="cred-title">Safety Compliant</h3>
+        <p class="cred-desc">We follow Canadian health and safety guidelines with full sterilisation protocols for every single service we offer.</p>
+      </div>
+      <div class="cred reveal" style="transition-delay:.15s">
+        <div class="cred-label">Verified Reviews</div>
+        <h3 class="cred-title">Google Verified Business</h3>
+        <p class="cred-desc">Verified and consistently rated 4.9 stars on Google by our real clients — honest reviews from people we have served.</p>
+      </div>
+      <div class="cred reveal" style="transition-delay:.20s">
+        <div class="cred-label">Products</div>
+        <h3 class="cred-title">Quality Approved</h3>
+        <p class="cred-desc">We use only dermatologically tested, quality-approved products from trusted professional brands our clients rely on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-dark">
+  <div class="wrap">
+    <h2 class="reveal">Ready to Experience<br/><em>The Emerance Difference?</em></h2>
+    <p class="reveal">Book your appointment and let our certified team take genuine care of you.</p>
+    <div class="cta-btns reveal">
+      <a href="contact.html#booking" class="btn-white">Book Appointment</a>
+      <a href="services.html" class="btn-outline-w">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="f-logo">Emerance</div>
+        <div class="f-logo-sub">The Salon — [City], Canada</div>
+        <p class="f-desc">[City]'s trusted beauty studio. Skilled hands, genuine care and a team that truly looks after you.</p>
+        <div class="f-social">
+          <a href="[INSTAGRAM_LINK]" class="f-soc" target="_blank" title="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="tel:+1XXXXXXXXXX" class="f-soc" title="Call">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .99h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/jhimDvAUzcV2nC137" class="f-soc" target="_blank" title="Location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Pages</div>
+        <ul class="f-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Services</div>
+        <ul class="f-links">
+          <li><a href="services.html">Haircut &amp; Styling</a></li>
+          <li><a href="services.html">Hair Colouring</a></li>
+          <li><a href="services.html">Hair Spa</a></li>
+          <li><a href="services.html">Facial &amp; Skin</a></li>
+          <li><a href="services.html">Bridal Makeup</a></li>
+          <li><a href="services.html">Keratin</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Hours</div>
+        <div class="f-hours">
+          <div class="f-hour"><span class="f-hour-d">Mon–Fri</span><span>10AM – 8PM</span></div>
+          <div class="f-hour"><span class="f-hour-d">Saturday</span><span>9AM – 9PM</span></div>
+          <div class="f-hour"><span class="f-hour-d">Sunday</span><span>10AM – 7PM</span></div>
+        </div>
+        <div style="margin-top:28px">
+          <div class="f-col-title">Contact</div>
+          <ul class="f-links">
+            <li><a href="tel:+1XXXXXXXXXX">+1 (XXX) XXX-XXXX</a></li>
+            <li><a href="contact.html">Book Appointment</a></li>
+            <li><a href="https://maps.app.goo.gl/jhimDvAUzcV2nC137" target="_blank">Get Directions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="f-copy">© 2025 Emerance – The Salon. All rights reserved.</div>
+      <div class="f-bot-links">
+        <a href="#">Privacy Policy</a>
+        <a href="contact.html#booking">Book Now</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>
+const burger=document.getElementById('burger'),mob=document.getElementById('mob');
+burger.addEventListener('click',()=>{mob.classList.add('open');burger.classList.add('open')});
+document.getElementById('mobX').addEventListener('click',closeMob);
+function closeMob(){mob.classList.remove('open');burger.classList.remove('open')}
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMob));
+
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');ro.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+function count(el){
+  const t=parseInt(el.dataset.target);if(isNaN(t))return;
+  let c=0;const s=Math.ceil(t/40);
+  const ti=setInterval(()=>{c=Math.min(c+s,t);el.textContent=c+'+';if(c>=t)clearInterval(ti)},30);
+}
+const co=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll('[data-target]').forEach(count);co.unobserve(x.target)}})},{threshold:.5});
+const sg=document.querySelector('.stats-inner');if(sg)co.observe(sg);
+
+// Draggable floral element
+(function(){
+  const el=document.getElementById('floralEl');
+  if(!el)return;
+  let dragging=false,ox=0,oy=0;
+  function startDrag(e){
+    dragging=true;
+    const p=e.touches?e.touches[0]:e;
+    const r=el.getBoundingClientRect();
+    ox=p.clientX-r.left;oy=p.clientY-r.top;
+    el.style.animation='none';
+    el.style.cursor='grabbing';
+    e.preventDefault();
+  }
+  function moveDrag(e){
+    if(!dragging)return;
+    const p=e.touches?e.touches[0]:e;
+    const par=el.parentElement.getBoundingClientRect();
+    let nx=p.clientX-par.left-ox;
+    let ny=p.clientY-par.top-oy;
+    nx=Math.max(0,Math.min(par.width-el.offsetWidth,nx));
+    ny=Math.max(0,Math.min(par.height-el.offsetHeight,ny));
+    el.style.left=nx+'px';el.style.top=ny+'px';el.style.right='auto';
+  }
+  function endDrag(){
+    dragging=false;
+    el.style.cursor='grab';
+    el.style.animation='floatPetal 8s ease-in-out infinite';
+  }
+  el.addEventListener('mousedown',startDrag);
+  el.addEventListener('touchstart',startDrag,{passive:false});
+  document.addEventListener('mousemove',moveDrag);
+  document.addEventListener('touchmove',moveDrag,{passive:false});
+  document.addEventListener('mouseup',endDrag);
+  document.addEventListener('touchend',endDrag);
+})();
+</script>
+</body>
+</html>
